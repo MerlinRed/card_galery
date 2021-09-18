@@ -15,4 +15,9 @@ const clearActiveClasses = () => {
     })
 }
 
-addActiveClasses()
+const baseActiveCard = (active = Math.floor(slides.length / 2)) => {
+    slides[active].classList.add('active')
+    addActiveClasses()
+}
+
+baseActiveCard()
